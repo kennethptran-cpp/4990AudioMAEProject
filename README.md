@@ -23,4 +23,4 @@ Please note that this notebook acts as a **Hardware Stress Test**.
 
 When the execution reaches the "Constrained Edge Simulation" cells (where batch sizes are restricted to simulate embedded memory limits), the system may experience severe processing latency, DataLoader bottlenecks, or `CUDA Out of Memory` (OOM) faults. 
 
-This is not the intended result of the experiment but it demonstrates our core finding: the 86-million parameter footprint of the ViT-Base encoder is fundamentally too large for native, unoptimized edge deployment. This repository serves as proof that aggressive model compression (such as INT8 quantization or structural pruning) is strictly required before these architectures can be utilized in isolated Electrical and Computer Engineering (ECE) environments
+This is not the intended result of the experiment but it demonstrates our core finding: the 86-million parameter footprint of the ViT-Base encoder is fundamentally too large for native, unoptimized edge deployment. This repository serves as proof that aggressive model compression (such as INT8 quantization or structural pruning) is likely required to run on edge devices.
